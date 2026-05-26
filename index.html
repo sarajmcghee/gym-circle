@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Circle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <p class="eyebrow">Gym Circle</p>
+            <h1>Today</h1>
+          </div>
+        </div>
+
+        <section class="profile-panel" aria-labelledby="profile-heading">
+          <h2 id="profile-heading">Profiles</h2>
+          <div class="profile-list" id="profileList"></div>
+        </section>
+
+        <nav class="tab-nav" aria-label="App views">
+          <button class="tab-button active" data-view="today" type="button">Today</button>
+          <button class="tab-button" data-view="library" type="button">Library</button>
+          <button class="tab-button" data-view="progress" type="button">Progress</button>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <section class="hero-band">
+          <div>
+            <p class="eyebrow" id="dateLabel"></p>
+            <h2 id="heroTitle"></h2>
+            <p id="heroSubtitle"></p>
+          </div>
+          <div class="session-meter">
+            <span id="durationLabel">45-60 min</span>
+            <div class="meter-track">
+              <span id="meterFill"></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="view active" id="todayView" aria-label="Today workout">
+          <div class="workout-layout">
+            <div class="workout-column">
+              <div class="section-heading">
+                <h2 id="workoutTitle"></h2>
+                <button class="ghost-button" id="nextWorkoutButton" type="button">Next workout</button>
+              </div>
+              <div class="block-list" id="workoutBlocks"></div>
+            </div>
+
+            <aside class="log-panel">
+              <div class="section-heading compact">
+                <h2>Log</h2>
+                <button class="primary-button" id="saveLogButton" type="button">Save</button>
+              </div>
+              <form id="workoutLog"></form>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="libraryView" aria-label="Exercise library">
+          <div class="section-heading">
+            <h2>Library</h2>
+            <input id="searchInput" class="search-input" type="search" placeholder="Search exercises" />
+          </div>
+          <div class="library-grid" id="libraryGrid"></div>
+        </section>
+
+        <section class="view" id="progressView" aria-label="Progress history">
+          <div class="section-heading">
+            <h2>Progress</h2>
+            <button class="ghost-button danger" id="clearHistoryButton" type="button">Clear history</button>
+          </div>
+          <div class="stats-grid" id="statsGrid"></div>
+          <div class="history-list" id="historyList"></div>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="exercise-dialog" id="exerciseDialog">
+      <div class="dialog-card">
+        <button class="icon-button close-dialog" id="closeDialog" type="button" aria-label="Close">x</button>
+        <p class="eyebrow" id="dialogCategory"></p>
+        <h2 id="dialogTitle"></h2>
+        <p id="dialogSummary"></p>
+        <div class="detail-grid">
+          <section>
+            <h3>How</h3>
+            <ol id="dialogSteps"></ol>
+          </section>
+          <section>
+            <h3>Cues</h3>
+            <ul id="dialogCues"></ul>
+          </section>
+        </div>
+        <a class="primary-button link-button" id="dialogLink" href="#" target="_blank" rel="noreferrer">
+          Watch form video
+        </a>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
