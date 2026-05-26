@@ -279,51 +279,72 @@ const plans = {
   ],
   coreCardio: [
     {
-      title: "Core Stability + Intervals",
-      subtitle: "Back-friendly core work with a controlled rowing finish.",
+      title: "Full Body Strength + Core",
+      subtitle: "Beginner strength work with core stability and a controlled rowing finish.",
       blocks: [
         { name: "Warmup", time: "6 min", items: [{ id: "elliptical", prescription: "Easy pace" }] },
         {
-          name: "Core",
-          time: "30 min",
+          name: "Strength",
+          time: "22 min",
           items: [
-            { id: "deadBug", prescription: "3 x 10 each side" },
-            { id: "plank", prescription: "3 x 20-40 sec" },
-            { id: "birdDog", prescription: "3 x 10 each side" },
+            { id: "gobletSquat", prescription: "3 x 8" },
+            { id: "seatedRow", prescription: "3 x 10" },
+          ],
+        },
+        {
+          name: "Core",
+          time: "12 min",
+          items: [
+            { id: "deadBug", prescription: "2 x 10 each side" },
+            { id: "plank", prescription: "2 x 20-40 sec" },
           ],
         },
         { name: "Cardio", time: "12 min", items: [{ id: "rowingMachine", prescription: "1 min strong / 1 min easy" }] },
       ],
     },
     {
-      title: "Rotation + Bike",
-      subtitle: "Core control, anti-rotation strength, and bike intervals.",
+      title: "Upper Body + Bike",
+      subtitle: "Pressing, pulling, core control, and bike intervals.",
       blocks: [
         { name: "Warmup", time: "6 min", items: [{ id: "rowingMachine", prescription: "Easy pace" }] },
         {
-          name: "Core",
+          name: "Strength",
           time: "30 min",
           items: [
-            { id: "cableWoodChop", prescription: "3 x 10 each side" },
-            { id: "farmerCarry", prescription: "4 x 30 sec" },
-            { id: "deadBug", prescription: "3 x 8 each side" },
+            { id: "chestPress", prescription: "3 x 10" },
+            { id: "seatedRow", prescription: "3 x 10" },
+            { id: "shoulderPress", prescription: "2 x 8" },
+          ],
+        },
+        {
+          name: "Core",
+          time: "8 min",
+          items: [
+            { id: "cableWoodChop", prescription: "2 x 10 each side" },
           ],
         },
         { name: "Cardio", time: "12 min", items: [{ id: "bikeIntervals", prescription: "45 sec strong / 75 sec easy" }] },
       ],
     },
     {
-      title: "Core Endurance + Elliptical",
-      subtitle: "Timed holds, steady breathing, and low-impact cardio.",
+      title: "Lower Body + Carry",
+      subtitle: "Leg strength, loaded carries, and low-impact cardio.",
       blocks: [
         { name: "Warmup", time: "5 min", items: [{ id: "elliptical", prescription: "Easy pace" }] },
         {
-          name: "Core",
-          time: "32 min",
+          name: "Strength",
+          time: "28 min",
           items: [
-            { id: "plank", prescription: "4 x 20-45 sec" },
-            { id: "birdDog", prescription: "3 x 10 each side" },
-            { id: "cableWoodChop", prescription: "3 x 8 each side" },
+            { id: "dumbbellRdl", prescription: "3 x 10" },
+            { id: "stepUps", prescription: "3 x 8 each leg" },
+            { id: "farmerCarry", prescription: "4 x 30 sec" },
+          ],
+        },
+        {
+          name: "Core",
+          time: "8 min",
+          items: [
+            { id: "birdDog", prescription: "2 x 10 each side" },
           ],
         },
         { name: "Cardio", time: "12 min", items: [{ id: "elliptical", prescription: "Steady effort" }] },
