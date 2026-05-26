@@ -26,18 +26,18 @@ const users = {
 };
 
 const exercises = {
-  treadmillWalk: {
-    name: "Treadmill Walk",
+  rowingMachine: {
+    name: "Rowing Machine",
     category: "Cardio",
-    summary: "A steady walk to raise body temperature and loosen hips, knees, and ankles.",
-    equipment: "Treadmill",
+    summary: "A full-body cardio option that warms up legs, back, and core without running.",
+    equipment: "Rower",
     steps: [
-      "Start at a comfortable pace for the first minute.",
-      "Stand tall and keep your stride smooth.",
-      "Add a small incline if it still feels easy.",
+      "Strap your feet in and sit tall with arms straight.",
+      "Push with your legs first, then lean slightly back and pull the handle to your ribs.",
+      "Return by sending arms forward, hinging at the hips, then bending your knees.",
     ],
-    cues: ["Relax your shoulders.", "Breathe through the whole walk.", "Keep the pace conversational."],
-    link: "https://www.youtube.com/results?search_query=beginner+treadmill+walking+workout",
+    cues: ["Legs, body, arms on the pull.", "Arms, body, legs on the return.", "Keep the stroke smooth, not rushed."],
+    link: "https://www.youtube.com/results?search_query=rowing+machine+beginner+form",
   },
   gobletSquat: {
     name: "Goblet Squat",
@@ -208,28 +208,28 @@ const exercises = {
     cues: ["Stand tall.", "Keep feet flat.", "Use the handles without pulling hard."],
     link: "https://www.youtube.com/results?search_query=beginner+elliptical+workout",
   },
-  inclineWalk: {
-    name: "Incline Walk",
+  sledPush: {
+    name: "Sled Push",
     category: "Cardio",
-    summary: "A treadmill finisher that adds challenge without needing to run.",
-    equipment: "Treadmill",
+    summary: "A low-skill conditioning move that trains legs, core bracing, and effort control.",
+    equipment: "Sled",
     steps: [
-      "Set a steady walking speed.",
-      "Raise incline to a moderate level.",
-      "Lower incline if your stride gets sloppy.",
+      "Load the sled light enough that it moves smoothly.",
+      "Lean forward with straight arms or hands on the posts.",
+      "Drive through the floor with short, powerful steps.",
     ],
-    cues: ["Avoid hanging on the rails.", "Shorten your stride on hills.", "Keep effort at a 6 or 7 out of 10."],
-    link: "https://www.youtube.com/results?search_query=beginner+incline+treadmill+walk",
+    cues: ["Start lighter than you think.", "Keep your back long.", "Rest enough that every push stays controlled."],
+    link: "https://www.youtube.com/results?search_query=sled+push+beginner+form",
   },
 };
 
 const plans = {
   strengthCardio: [
     {
-      title: "Lower Body + Incline Walk",
-      subtitle: "Leg strength, glutes, and a steady cardio finish.",
+      title: "Lower Body + Sled Push",
+      subtitle: "Leg strength, glutes, and a powerful cardio finish.",
       blocks: [
-        { name: "Warmup", time: "6 min", items: [{ id: "treadmillWalk", prescription: "Easy pace" }] },
+        { name: "Warmup", time: "6 min", items: [{ id: "rowingMachine", prescription: "Easy pace" }] },
         {
           name: "Strength",
           time: "30 min",
@@ -239,7 +239,7 @@ const plans = {
             { id: "stepUps", prescription: "3 x 8 each leg" },
           ],
         },
-        { name: "Cardio", time: "12 min", items: [{ id: "inclineWalk", prescription: "Moderate incline" }] },
+        { name: "Cardio", time: "12 min", items: [{ id: "sledPush", prescription: "6-8 pushes / easy walk back" }] },
       ],
     },
     {
@@ -260,10 +260,10 @@ const plans = {
       ],
     },
     {
-      title: "Full Body + Carry",
-      subtitle: "Simple full-body strength with a posture-focused finisher.",
+      title: "Full Body + Row",
+      subtitle: "Simple full-body strength with a rowing finisher.",
       blocks: [
-        { name: "Warmup", time: "6 min", items: [{ id: "treadmillWalk", prescription: "Easy pace" }] },
+        { name: "Warmup", time: "6 min", items: [{ id: "rowingMachine", prescription: "Easy pace" }] },
         {
           name: "Strength",
           time: "32 min",
@@ -273,14 +273,14 @@ const plans = {
             { id: "farmerCarry", prescription: "4 x 30 sec" },
           ],
         },
-        { name: "Cardio", time: "10 min", items: [{ id: "inclineWalk", prescription: "Steady effort" }] },
+        { name: "Cardio", time: "10 min", items: [{ id: "rowingMachine", prescription: "Steady effort" }] },
       ],
     },
   ],
   coreCardio: [
     {
       title: "Core Stability + Intervals",
-      subtitle: "Back-friendly core work with a controlled treadmill finish.",
+      subtitle: "Back-friendly core work with a controlled rowing finish.",
       blocks: [
         { name: "Warmup", time: "6 min", items: [{ id: "elliptical", prescription: "Easy pace" }] },
         {
@@ -292,14 +292,14 @@ const plans = {
             { id: "birdDog", prescription: "3 x 10 each side" },
           ],
         },
-        { name: "Cardio", time: "12 min", items: [{ id: "treadmillWalk", prescription: "1 min brisk / 1 min easy" }] },
+        { name: "Cardio", time: "12 min", items: [{ id: "rowingMachine", prescription: "1 min strong / 1 min easy" }] },
       ],
     },
     {
       title: "Rotation + Bike",
       subtitle: "Core control, anti-rotation strength, and bike intervals.",
       blocks: [
-        { name: "Warmup", time: "6 min", items: [{ id: "treadmillWalk", prescription: "Easy pace" }] },
+        { name: "Warmup", time: "6 min", items: [{ id: "rowingMachine", prescription: "Easy pace" }] },
         {
           name: "Core",
           time: "30 min",
